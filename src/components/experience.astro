@@ -1,0 +1,70 @@
+---
+const experience = [
+  {
+    role: "Trained Pentester",
+    org: "Cyberguardx · Egypt",
+    date: "07/2025 – 10/2025",
+    desc: "Hands-on training identifying and understanding web vulnerabilities including CSRF, SSRF, SQL Injection, Path Traversal, Remote Command Execution, Authentication Bypass, and more.",
+  },
+  {
+    role: "CTF Player",
+    org: "Root-Me & TryHackMe",
+    date: "08/2025",
+    desc: "Active CTF player with hands-on experience in web exploitation and cryptography, strengthening practical skills in vulnerability discovery, exploitation and problem-solving.",
+  },
+  {
+    role: "B.Sc. Cybersecurity (Undergraduate)",
+    org: "Pharos University in Alexandria · Egypt",
+    date: "10/2022 – Expected 2027",
+    desc: "Grade: Very Good (equivalent to 2.8 GPA).",
+  },
+];
+
+const certificates = [
+  "Pre Security (Legacy) – TryHackMe",
+  "Cyber Security 101 – TryHackMe",
+  "Advent of Cyber 2025 – TryHackMe",
+  "Introduction to Artificial Intelligence – IBM",
+  "Introduction to Agile Development and Scrum – IBM",
+  "Introduction to Relational Databases (RDBMS) – IBM",
+  "Databases and SQL for Data Science with Python – IBM",
+  "Introduction to Databases – Meta",
+  "Programming for Everybody (Python) – University of Michigan",
+  "Python Basics – University of Michigan",
+  "Object-Oriented Hierarchies in Java – LearnQuest",
+  "Automation Script with Selenium and Java – Coursera",
+];
+---
+
+<section id="experience" class="py-12 border-t border-[#ffffff10] text-[var(--white)]">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-lg text-[var(--sec)] mb-2 shiny-sec">My journey</h2>
+    <h3 class="text-4xl md:text-5xl font-medium mb-8">Experience</h3>
+
+    <div class="space-y-4">
+      {
+        experience.map((item) => (
+          <div class="bg-[#1414149c] border border-[var(--white-icon-tr)] rounded-2xl p-6">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-1">
+              <h4 class="text-xl font-semibold">{item.role}</h4>
+              <span class="text-sm text-[var(--sec)]">{item.date}</span>
+            </div>
+            <p class="text-[var(--white-icon)] text-sm mt-1">{item.org}</p>
+            <p class="text-[var(--white-icon)] mt-3">{item.desc}</p>
+          </div>
+        ))
+      }
+    </div>
+
+    <h3 class="text-2xl md:text-3xl font-medium mt-12 mb-5">Certificates</h3>
+    <div class="flex flex-wrap gap-3">
+      {
+        certificates.map((c) => (
+          <span class="text-sm text-[var(--white-icon)] border border-[var(--white-icon-tr)] bg-[#1414149c] rounded-full px-4 py-2">
+            {c}
+          </span>
+        ))
+      }
+    </div>
+  </div>
+</section>
